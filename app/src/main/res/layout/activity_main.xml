@@ -46,7 +46,7 @@
         android:layout_gravity="bottom|center"
         android:layout_margin="@dimen/fab_margin"
         app:backgroundTint="@color/purple_500"
-        app:maxImageSize="35dp"
+        app:maxImageSize="30dp"
         app:rippleColor="@color/black"
         app:srcCompat="@android:drawable/ic_input_add" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
