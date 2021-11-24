@@ -4,26 +4,35 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fragments_example_app.R
 import com.example.fragments_example_app.data.tasks
+import com.example.fragments_example_app.utils.SimpleAdapter
+import kotlin.random.Random
 
 class `2daily_fragment` : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.dailies_2, container, false)
+        val adapter = SimpleAdapter(
+            tasks,
+            R.layout.dailies_2,
+            R.layout.dailies_single,
+            inflater, container
+        ) { itemView, element, i ->
 
-        // Set the adapter
-        if (view is RecyclerView) {
-            context?.let {
-                // Només utilitzo el context si no és null; sino, finalitzo activity
-                view.adapter = fragment_adapter(it, tasks)
-            } ?: activity?.finish()
+            // Set name
+            itemView.findViewById<TextView>(R.id.particleName).text =
+                "${element.name} at position $i"
+
+            // Set random color
+            itemView.findViewById<ImageView>(R.id.particleImage).setColorFilter(Random.nextInt())
         }
 
-        return view
+        return adapter.view
     }
 }

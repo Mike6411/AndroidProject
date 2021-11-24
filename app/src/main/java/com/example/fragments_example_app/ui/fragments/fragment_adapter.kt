@@ -20,7 +20,7 @@ class fragment_adapter(val context: Context, private val tasks: List<task>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.habits_single, parent, false)
+            .inflate(R.layout.dailies_single, parent, false)
         // Assignem el layout al ViewHolder
         return ViewHolder(view)
     }
