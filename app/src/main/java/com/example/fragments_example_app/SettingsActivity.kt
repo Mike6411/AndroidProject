@@ -1,4 +1,4 @@
-package com.example.particles_example_app
+package com.example.fragments_example_app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

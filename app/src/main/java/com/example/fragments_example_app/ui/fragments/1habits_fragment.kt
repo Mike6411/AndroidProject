@@ -1,4 +1,4 @@
-package com.example.particles_example_app.ui.fragments
+package com.example.fragments_example_app.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.particles_example_app.R
-import com.example.particles_example_app.data.Tasks
-import com.example.particles_example_app.utils.SimpleAdapter
+import com.example.fragments_example_app.R
+import com.example.fragments_example_app.data.tasks
+import com.example.fragments_example_app.utils.SimpleAdapter
 import kotlin.random.Random
 
 class `1habits_fragment` : Fragment() {
@@ -18,7 +18,7 @@ class `1habits_fragment` : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         val adapter = SimpleAdapter(
-            Tasks,
+            tasks,
             R.layout.habits_1,
             R.layout.habits_single,
             inflater, container

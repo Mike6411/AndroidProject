@@ -1,10 +1,10 @@
-package com.example.particles_example_app.ui.main
+package com.example.fragments_example_app.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.example.particles_example_app.R
-import com.example.particles_example_app.utils.toast
+import com.example.fragments_example_app.R
+import com.example.fragments_example_app.utils.toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout

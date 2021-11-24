@@ -1,12 +1,12 @@
-package com.example.particles_example_app.data
+package com.example.fragments_example_app.data
 
 import kotlin.random.Random
 
 
-data class Task(
+data class task(
     val name: String,
     val family: Family,
-    val somenumber: Double,
+    val somenumber: Double
 
 ) {
 
@@ -18,7 +18,7 @@ data class Task(
     )
 
     enum class Family {
-        Default
+        DEFAULT
     }
 
     companion object {

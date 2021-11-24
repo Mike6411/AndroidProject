@@ -1,11 +1,11 @@
-package com.example.particles_example_app.ui.main
+package com.example.fragments_example_app.ui.main
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.particles_example_app.ui.fragments.`1habits_fragment`
-import com.example.particles_example_app.ui.fragments.`3todo_fragment`
-import com.example.particles_example_app.ui.fragments.`2daily_fragment`
+import com.example.fragments_example_app.ui.fragments.`1habits_fragment`
+import com.example.fragments_example_app.ui.fragments.`3todo_fragment`
+import com.example.fragments_example_app.ui.fragments.`2daily_fragment`
 import java.lang.IllegalStateException
 
 

@@ -1,4 +1,4 @@
-package com.example.particles_example_app.utils
+package com.example.fragments_example_app.utils
 
 import android.view.LayoutInflater
 import android.view.View
