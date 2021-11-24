@@ -1,4 +1,4 @@
-package com.example.particles_example_app.ui.particles_list
+package com.example.particles_example_app.ui.fragments
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,25 +8,25 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.particles_example_app.R
-import com.example.particles_example_app.data.Particle
+import com.example.particles_example_app.data.Task
 import com.example.particles_example_app.utils.toast
 
 
 /**
  * Adapter que presenta una llista de particules
  */
-class ParticleRecyclerViewAdapter(val context: Context, private val particles: List<Particle>) :
-    RecyclerView.Adapter<ParticleRecyclerViewAdapter.ViewHolder>() {
+class fragment_adapter(val context: Context, private val tasks: List<Task>) :
+    RecyclerView.Adapter<fragment_adapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_particles, parent, false)
+            .inflate(R.layout.habits_single, parent, false)
         // Assignem el layout al ViewHolder
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val particle = particles[position]
+        val particle = tasks[position]
 
         // Set name
         holder.name.text = particle.name
@@ -34,22 +34,19 @@ class ParticleRecyclerViewAdapter(val context: Context, private val particles: L
         // Set color
         // It selects the ID of the color in function of the family of this particle
         val color = when (particle.family) {
-            Particle.Family.QUARK -> R.color.quarks
-            Particle.Family.LEPTON -> R.color.leptons
-            Particle.Family.GAUGE_BOSON -> R.color.gauge_bosons
-            Particle.Family.SCALAR_BOSON-> R.color.higgs
+            Task.Family.Default -> R.color.quarks
         }
         // It converts the ID to the properly color and set it to the image
         holder.image.setColorFilter(context.getColor(color))
 
         // Set on item click listener
         holder.view.setOnClickListener {
-            // Sabem que es mostrarà "bé" perquè Particle és un data class
+            // Sabem que es mostrarà "bé" perquè Task és un data class
             context.toast(particle.toString())
         }
     }
 
-    override fun getItemCount(): Int = particles.size
+    override fun getItemCount(): Int = tasks.size
 
     inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.particleName)

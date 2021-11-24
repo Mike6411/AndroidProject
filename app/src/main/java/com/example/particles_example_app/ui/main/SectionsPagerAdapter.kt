@@ -3,10 +3,9 @@ package com.example.particles_example_app.ui.main
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.particles_example_app.ui.ParticlesWithSimpleAdapterFragment
-import com.example.particles_example_app.ui.ParticlesWithSimpleAdapterFragmentNoColor
-import com.example.particles_example_app.ui.StandardModelFragment
-import com.example.particles_example_app.ui.particles_list.ParticlesFragment
+import com.example.particles_example_app.ui.fragments.`1habits_fragment`
+import com.example.particles_example_app.ui.fragments.`3todo_fragment`
+import com.example.particles_example_app.ui.fragments.`2daily_fragment`
 import java.lang.IllegalStateException
 
 
@@ -27,10 +26,10 @@ class SectionsPagerAdapter(fm: FragmentManager) :
     // Aquesta funció indica el fragment que s'ha de posar
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> ParticlesWithSimpleAdapterFragment()
-            1 -> ParticlesFragment()
-            2 -> ParticlesWithSimpleAdapterFragment()
-            3 -> ParticlesWithSimpleAdapterFragmentNoColor()
+            0 -> `1habits_fragment`()
+            1 -> `2daily_fragment`()
+            2 -> `3todo_fragment`()
+            3 -> `3todo_fragment`() //aqui ira el calendar_fragment
             else -> throw IllegalStateException("There's only 4 tabs")
         }
     }

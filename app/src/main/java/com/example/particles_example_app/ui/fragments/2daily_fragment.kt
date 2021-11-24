@@ -1,4 +1,4 @@
-package com.example.particles_example_app.ui.particles_list
+package com.example.particles_example_app.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,20 +7,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.particles_example_app.R
-import com.example.particles_example_app.data.Particles
+import com.example.particles_example_app.data.Tasks
 
-class ParticlesFragment : Fragment() {
+class `2daily_fragment` : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_particles_list, container, false)
+        val view = inflater.inflate(R.layout.habits_1, container, false)
 
         // Set the adapter
         if (view is RecyclerView) {
             context?.let {
                 // Només utilitzo el context si no és null; sino, finalitzo activity
-                view.adapter = ParticleRecyclerViewAdapter(it, Particles)
+                view.adapter = fragment_adapter(it, Tasks)
             } ?: activity?.finish()
         }
 
