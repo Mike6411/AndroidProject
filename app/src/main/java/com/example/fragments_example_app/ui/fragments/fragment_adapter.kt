@@ -31,14 +31,6 @@ class fragment_adapter(val context: Context, private val tasks: List<task>) :
         // Set name
         holder.name.text = task.name
 
-        // Set color
-        // It selects the ID of the color in function of the family of this particle
-        val color = when (task.family) {
-            task.Family.Default -> R.color.black
-        }
-        // It converts the ID to the properly color and set it to the image
-        holder.image.setColorFilter(context.getColor(color))
-
         // Set on item click listener
         holder.view.setOnClickListener {
             // Sabem que es mostrarà "bé" perquè task és un data class
