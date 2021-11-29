@@ -17,8 +17,8 @@ class `3todo_fragment` : Fragment() {
     ): View {
         val adapter = SimpleAdapter(
             tasks,
-            R.layout.habits_1,
-            R.layout.habits_single,
+            R.layout.todo_3,
+            R.layout.todo_single,
             inflater, container
         ) { itemView, element, i ->
 
