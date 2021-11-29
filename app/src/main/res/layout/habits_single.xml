@@ -5,11 +5,14 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#81719F"
+    android:backgroundTint="#9D89BF"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
     android:rotationX="0"
-    android:rotationY="0">
+    android:rotationY="0"
+    app:barrierMargin="20dp">
 
     <ImageView
         android:id="@+id/particleImage"
@@ -24,35 +27,20 @@
         app:srcCompat="@drawable/ic_baseline_blur_on_24"
         app:tint="#673AB7" />
 
-    <TextView
-        android:id="@+id/particleName"
+    <CheckBox
+        android:id="@+id/checkPositivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:text="Up"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintBottom_toBottomOf="@+id/particleImage"
-        app:layout_constraintStart_toEndOf="@+id/particleImage"
-        app:layout_constraintTop_toTopOf="@+id/particleImage" />
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="24dp" />
 
-    <TextView
-        android:id="@+id/particleName2"
+    <CheckBox
+        android:id="@+id/checkNegativo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="fragment"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintBottom_toBottomOf="@+id/particleImage"
-        app:layout_constraintStart_toEndOf="@+id/particleImage"
-        app:layout_constraintTop_toTopOf="@+id/particleImage" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Switch"
-        app:layout_constraintStart_toEndOf="@+id/particleName"
-        tools:layout_editor_absoluteY="20dp" />
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="21dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
