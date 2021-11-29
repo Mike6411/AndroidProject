@@ -23,7 +23,7 @@ class `3todo_fragment` : Fragment() {
         ) { itemView, element, i ->
 
             // Set name
-            itemView.findViewById<TextView>(R.id.particleName).text =
+            //itemView.findViewById<TextView>(R.id.particleName).text =
                 "${element.name} at position $i"
         }
 

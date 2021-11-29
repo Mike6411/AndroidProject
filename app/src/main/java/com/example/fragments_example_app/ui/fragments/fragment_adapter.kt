@@ -29,7 +29,7 @@ class fragment_adapter(val context: Context, private val tasks: List<task>) :
         val task = tasks[position]
 
         // Set name
-        holder.name.text = task.name
+        // holder.name.text = task.name
 
         // Set on item click listener
         holder.view.setOnClickListener {
@@ -41,7 +41,7 @@ class fragment_adapter(val context: Context, private val tasks: List<task>) :
     override fun getItemCount(): Int = tasks.size
 
     inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.particleName)
-        val image: ImageView = view.findViewById(R.id.particleImage)
+        //val name: TextView = view.findViewById(R.id.particleName)
+        //val image: ImageView = view.findViewById(R.id.particleImage)
     }
 }

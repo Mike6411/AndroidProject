@@ -24,33 +24,14 @@
         app:srcCompat="@drawable/ic_baseline_blur_on_24"
         app:tint="#673AB7" />
 
-    <TextView
-        android:id="@+id/particleName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:text="Up"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintBottom_toBottomOf="@+id/particleImage"
-        app:layout_constraintStart_toEndOf="@+id/particleImage"
-        app:layout_constraintTop_toTopOf="@+id/particleImage" />
-
-    <TextView
-        android:id="@+id/particleName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="fragment"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintBottom_toBottomOf="@+id/particleImage"
-        app:layout_constraintStart_toEndOf="@+id/particleImage"
-        app:layout_constraintTop_toTopOf="@+id/particleImage" />
-
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:layout_marginStart="88dp"
+        app:layout_constraintBottom_toBottomOf="@+id/particleImage"
+        app:layout_constraintStart_toEndOf="@+id/particleImage"
+        app:layout_constraintTop_toTopOf="@+id/particleImage"
+        app:layout_constraintVertical_bias="0.428" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

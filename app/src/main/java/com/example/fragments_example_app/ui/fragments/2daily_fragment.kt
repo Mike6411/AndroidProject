@@ -26,12 +26,12 @@ class `2daily_fragment` : Fragment() {
         ) { itemView, element, i ->
 
             // Set name
-            itemView.findViewById<TextView>(R.id.particleName).text =
-                "${element.name} at position $i"
-
-            // Set random color
-            itemView.findViewById<ImageView>(R.id.particleImage).setColorFilter(Random.nextInt())
-        }
+           // itemView.findViewById<TextView>(R.id.particleName).text =
+           //     "${element.name} at position $i"
+//
+           // // Set random color
+           // itemView.findViewById<ImageView>(R.id.particleImage).setColorFilter(Random.nextInt())
+        }//
 
         return adapter.view
     }
