@@ -5,9 +5,8 @@ import kotlin.random.Random
 
 data class task(
     val name: String,
-    val family: Family,
+    val taskFamily: Family,
     val somenumber: Double
-
 ) {
 
     // Second constructor with optional parameters
@@ -18,7 +17,7 @@ data class task(
     )
 
     enum class Family {
-        DEFAULT
+        DEFAULT,HABIT,DAILY,TODO
     }
 
     companion object {

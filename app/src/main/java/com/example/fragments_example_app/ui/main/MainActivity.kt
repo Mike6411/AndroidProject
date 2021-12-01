@@ -2,12 +2,15 @@ package com.example.fragments_example_app.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.example.fragments_example_app.R
 import com.example.fragments_example_app.utils.toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,13 +21,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Creem l'adapter pel ViewPager i el coloquem on toca
-        val sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
-        val viewPager: ViewPager = findViewById(R.id.view_pager)
+        val sectionsPagerAdapter = SectionsPagerAdapter(this)
+        val viewPager: ViewPager2 = findViewById(R.id.view_pager)
         viewPager.adapter = sectionsPagerAdapter
 
+//        viewPager.currentItem
+
         // Vinculem el ViewPager amb el TabLayout (gestor de pestanyes)
-        val tabs: TabLayout = findViewById(R.id.tabs)
-        tabs.setupWithViewPager(viewPager)
+//        val tabs: TabLayout = findViewById(R.id.tabs)
+//        tabs.setupWithViewPager(viewPager)
 
         // Afegim una acció al botó flotant
         val fab: FloatingActionButton = findViewById(R.id.fab)

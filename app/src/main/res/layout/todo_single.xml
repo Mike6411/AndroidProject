@@ -21,25 +21,80 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065"
         app:srcCompat="@drawable/ic_baseline_blur_on_24"
         app:tint="#673AB7" />
 
-    <TextView
-        android:id="@+id/particleName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/textlinearlayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Up"
-        android:textAppearance="?attr/textAppearanceListItem"
-        app:layout_constraintBottom_toBottomOf="@+id/particleImage"
-        app:layout_constraintStart_toEndOf="@+id/particleImage"
-        app:layout_constraintTop_toTopOf="@+id/particleImage" />
+        android:layout_centerHorizontal="true"
+        >
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toBottomOf="@+id/particleImage"
-        app:layout_constraintStart_toEndOf="@+id/particleName" />
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox"
+            tools:layout_editor_absoluteX="157dp"
+            tools:layout_editor_absoluteY="13dp" />
+
+        <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                tools:layout_editor_absoluteX="225dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                tools:layout_editor_absoluteX="225dp"
+                tools:layout_editor_absoluteY="141dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="141dp" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="411dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
