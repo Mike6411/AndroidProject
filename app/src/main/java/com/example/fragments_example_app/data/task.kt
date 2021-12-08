@@ -4,7 +4,7 @@ import kotlin.random.Random
 
 
 data class task(
-    val name: String,
+    val title: String,
     val taskFamily: Family,
     val somenumber: Double
 ) {

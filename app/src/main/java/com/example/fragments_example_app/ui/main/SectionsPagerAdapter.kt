@@ -1,15 +1,12 @@
 package com.example.fragments_example_app.ui.main
 
-import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import androidx.viewpager2.widget.ViewPager2
-import com.example.fragments_example_app.ui.fragments.`1habits_fragment`
-import com.example.fragments_example_app.ui.fragments.`3todo_fragment`
-import com.example.fragments_example_app.ui.fragments.`2daily_fragment`
+import com.example.fragments_example_app.ui.fragments.HabitsFragment
+import com.example.fragments_example_app.ui.fragments.TodoFragment
+import com.example.fragments_example_app.ui.fragments.DailyFragment
 import java.lang.IllegalStateException
 
 
@@ -30,10 +27,10 @@ class SectionsPagerAdapter(act: FragmentActivity) :
     // Aquesta funció indica el fragment que s'ha de posar
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> `1habits_fragment`()
-            1 -> `2daily_fragment`()
-            2 -> `3todo_fragment`()
-            3 -> `3todo_fragment`() //aqui ira el calendar_fragment
+            0 -> HabitsFragment()
+            1 -> DailyFragment()
+            2 -> TodoFragment()
+            3 -> TodoFragment() //aqui ira el calendar_fragment
             else -> throw IllegalStateException("There's only 4 tabs")
         }
     }

@@ -10,5 +10,5 @@
     android:layout_marginLeft="4dp"
     android:layout_marginRight="4dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".ui.fragments.1habits_fragment"
+    tools:context=".ui.fragments.HabitsFragment"
     tools:listitem="@layout/habits_single" />
